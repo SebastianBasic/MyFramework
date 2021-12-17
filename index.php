@@ -41,14 +41,14 @@
                         </td>
                         <td>
                             <a href="data/WC<?php echo $row["id"] ?>WC/edit" class="btn btn-warning">Edit</a>
-                            <a href="data/WC<?php echo $row["id"] ?>WC/delete" class="btn btn-danger">Delete</a>
+                            <a href="<?php path("delete", $row["id"]); ?>" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 <?php endforeach ?>
             </tbody>
         </table>
 
-        <form action="/data/create" method="post">
+        <form action="<?php path("create");  ?>" method="post">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input class="form-control" type="text" name="name" id="name">

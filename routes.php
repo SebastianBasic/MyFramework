@@ -12,7 +12,7 @@ route ('/data/create', function () {
     $data->create();
 
     header("location: /");
-});
+}, "create");
 
 route ('/data/edit', function ($id = null) {
     if ($id) {
@@ -38,6 +38,6 @@ route ('/data/delete', function ($id = null) {
         echo "Nema id!";
         die();
     }
-});
+}, "delete");
 
 dispatch($_SERVER["REQUEST_URI"]);
